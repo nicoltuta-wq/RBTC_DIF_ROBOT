@@ -1,0 +1,76 @@
+# Configuración de los Paneles de la Interfaz
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /RobotModel1/Links1
+        - /TF1
+      Splitter Ratio: 0.5
+    Tree Height: 557
+
+# Gestor de Visualización (Configuración de la Escena)
+Visualization Manager:
+  Class: ""
+  Displays:
+    # Configuración de la Rejilla (Grid)
+    - Name: Grid
+      Class: rviz_default_plugins/Grid
+      Enabled: true
+      Alpha: 0.5
+      Cell Size: 1
+      Color: 160; 160; 164
+
+    # Configuración del Modelo del Robot
+    - Name: RobotModel
+      Class: rviz_default_plugins/RobotModel
+      Enabled: true
+      Alpha: 0.6
+      Visual Enabled: true
+      Description Topic:
+        Value: /robot_description
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+
+    # Configuración de los Ejes de Coordenadas (TF)
+    - Name: TF
+      Class: rviz_default_plugins/TF
+      Enabled: true
+      Marker Scale: 0.3
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+
+  Enabled: true
+
+  # Opciones Globales de la Visualización
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_link
+    Frame Rate: 30
+
+  Name: root
+
+  # Herramientas de la Barra Superior
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+
+  # Configuración de la Cámara (Vista)
+  Views:
+    Current:
+      Name: Current View
+      Class: rviz_default_plugins/Orbit
+      Value: Orbit (rviz)
+      Target Frame: <Fixed Frame>
+    Saved: ~
